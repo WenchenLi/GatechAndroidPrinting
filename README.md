@@ -1,30 +1,24 @@
-Gatech android print
+Gatech Android Printing 
 =========================
-Migrate to GatechAndroidPrinting [repo](https://github.com/WenchenLi/GatechAndroidPrinting)
 #Goal
 The goal for this app is to help you using georgia tech's printing Service at ease
 with you android phone.
 
+#Usage
+* If you print from the within Georgia Tech network, you can print directly.(TODO)
+
+* Otherwise, you have to install [AnyConnect](https://play.google.com/store/apps/details?id=com.cisco.anyconnect.vpn.android.avf) first,
+and choose Add New VPN Connection with Server Address anyc.vpn.gatech.edu, and then start Connection to Georgia Tech network. Once connected,
+you can print as you are on campus.
 
 #notes
-
 This plugin unpacks minimal Debian installation with CUPS included,
 and launches it using PRoot, then uses it for actual printing.
-
-To generate Debian image, download repo https://github.com/pelya/cuntubuntu
-and launch script img-cups-jessie.sh from img directory.
-
-You will need to do this from Debian/Ubuntu, and install few packages, specified in it's readme file.
-
 PRoot can be downlaoded from http://proot.me/
-
-Other than these things, the plugin contains only Java code, and no other magic.
-
-There is no JNI or other weird stuff - Java code just calls lp, lpinfo, lpadmin etc commandline tools.
+There is no JNI - Java code just calls lp, lpinfo, lpadmin etc commandline tools.
 
 TODO:
 =====
-
 -   Add support for 64-bit architectures.
 -   Implement AdvancedPrintOptionsActivity:
 -    Page margins
